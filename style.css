@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    float: right;
+}
+
+/* Main Section Styles */
+main {
+    margin-top: 20px;
+}
+
+/* Upload Section Styles */
+.upload-section {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-area {
+    margin: 20px 0;
+}
+
+/* Sites Section Styles */
+.sites-section {
+    margin-top: 20px;
+}
+
+.sites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Site Card Styles */
+.site-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.site-card:hover {
+    transform: scale(1.05);
+}
+
+.site-card img {
+    width: 100%;
+    height: auto;
+}
+
+.site-card h3 {
+    margin: 10px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Dark Theme Styles */
+body.dark {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+body.dark header, body.dark footer {
+    background-color: #555;
+}
+
+body.dark .site-card {
+    background-color: #444;
+    border: 1px solid #666;
+}
+
+body.dark .site-card:hover {
+    background-color: #555;
+}

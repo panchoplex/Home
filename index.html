@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theusedtroll Personal Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Theusedtroll Personal Homepage</h1>
+            <div class="theme-toggle">
+                <button id="theme-toggle">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="upload-section">
+            <h2>Add New Site</h2>
+            <div class="upload-area" id="drop-area">
+                <p>Drag & drop a folder here or</p>
+                <button id="browse-btn">Browse Files</button>
+                <input type="file" id="file-input" multiple style="display: none;">
+            </div>
+            <p class="note">Note: GitHub Pages doesn't support file uploads. This is a client-side simulation.</p>
+        </section>
+
+        <section class="sites-section">
+            <h2>My Sites</h2>
+            <div class="sites-grid" id="sites-grid">
+                <!-- Sites will be dynamically generated here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Theusedtroll. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
