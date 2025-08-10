@@ -3,36 +3,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
-    const fetchMoviesBtn = document.getElementById('fetch-movies-btn');
     const moviesGrid = document.getElementById('movies-grid');
-    const omdbApiKeyInput = document.getElementById('omdb-api-key');
-    const movieTitlesTextarea = document.getElementById('movie-titles');
+    const apiKey = 'e74be34';
+    const movieTitles = ["Pokemon Detective Pikachu", "Elio"];
 
     // Theme toggle functionality
     themeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-theme');
-        themeToggle.textContent = body.classList.contains('dark-theme') ? '🌞' : '🌙';
+        body.classList.toggle('light-theme');
+        themeToggle.textContent = body.classList.contains('light-theme') ? '🌙' : '🌞';
     });
 
-    fetchMoviesBtn.addEventListener('click', fetchMovies);
+    fetchMovies();
 
     async function fetchMovies() {
-        const apiKey = omdbApiKeyInput.value.trim();
-        const titles = movieTitlesTextarea.value.trim().split('\n');
-
-        if (!apiKey) {
-            alert('Please enter your OMDb API key.');
-            return;
-        }
-
-        if (titles.length === 0 || titles[0] === '') {
-            alert('Please enter at least one movie title.');
-            return;
-        }
-
         moviesGrid.innerHTML = '';
 
-        for (const title of titles) {
+        for (const title of movieTitles) {
             if (title.trim() === '') continue;
 
             const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${encodeURIComponent(title)}`);
