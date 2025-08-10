@@ -1,10 +1,10 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #141414;
+    color: #fff;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -17,18 +17,26 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 0;
+    background-color: #000;
+    color: #e50914;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
 }
 
 h1 {
     margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
 /* Theme Toggle Button */
 .theme-toggle {
     float: right;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* Main Section Styles */
@@ -36,77 +44,118 @@ main {
     margin-top: 20px;
 }
 
-/* Upload Section Styles */
-.upload-section {
-    border: 2px dashed #ccc;
+/* API Section Styles */
+.api-section {
+    background-color: #222;
     padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
 
-.upload-area {
-    margin: 20px 0;
+.api-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* Sites Section Styles */
-.sites-section {
+#omdb-api-key, #movie-titles {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+}
+
+#fetch-movies-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e50914;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#fetch-movies-btn:hover {
+    background-color: #f40612;
+}
+
+
+/* Movies Section Styles */
+.movies-section {
     margin-top: 20px;
 }
 
-.sites-grid {
+.movies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
 }
 
-/* Site Card Styles */
-.site-card {
-    background-color: white;
-    border: 1px solid #ddd;
+/* Movie Card Styles */
+.movie-card {
+    background-color: #222;
     border-radius: 5px;
     overflow: hidden;
     transition: transform 0.2s;
+    cursor: pointer;
 }
 
-.site-card:hover {
+.movie-card:hover {
     transform: scale(1.05);
 }
 
-.site-card img {
+.movie-card img {
     width: 100%;
     height: auto;
 }
 
-.site-card h3 {
+.movie-card h3 {
     margin: 10px;
+    font-size: 1rem;
+    text-align: center;
 }
 
 /* Footer Styles */
 footer {
     text-align: center;
-    padding: 10px 0;
-    background-color: #4CAF50;
-    color: white;
+    padding: 20px 0;
+    background-color: #000;
+    color: #888;
     position: relative;
     bottom: 0;
     width: 100%;
+    border-top: 1px solid #333;
 }
 
-/* Dark Theme Styles */
-body.dark {
-    background-color: #333;
-    color: #f0f0f0;
+/* Dark Theme Styles (Now the default) */
+body.light-theme {
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-body.dark header, body.dark footer {
-    background-color: #555;
+body.light-theme header, body.light-theme footer {
+    background-color: #4CAF50;
+    color: white;
 }
 
-body.dark .site-card {
-    background-color: #444;
-    border: 1px solid #666;
+body.light-theme .api-section {
+    background-color: #fff;
 }
 
-body.dark .site-card:hover {
-    background-color: #555;
+body.light-theme #omdb-api-key, body.light-theme #movie-titles {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+body.light-theme .movie-card {
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+body.light-theme .movie-card:hover {
+    background-color: #f9f9f9;
 }
