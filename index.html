@@ -3,44 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theusedtroll Personal Homepage</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Theusedtroll Personal Homepage</h1>
-            <div class="theme-toggle">
-                <button id="theme-toggle">🌙</button>
-            </div>
+            <h1>My Projects</h1>
         </div>
     </header>
 
-    <main class="container">
-        <section class="upload-section">
-            <h2>Add New Site</h2>
-            <div class="upload-area" id="drop-area">
-                <p>Drag & drop a folder here or</p>
-                <button id="browse-btn">Browse Files</button>
-                <input type="file" id="file-input" multiple style="display: none;">
+    <main class="feed-container">
+        <article class="post">
+            <header class="post-header">
+                <h2>Movie Collection</h2>
+            </header>
+            <div class="post-image">
+                <img src="https://via.placeholder.com/600x800.png?text=Project+Screenshot" alt="Screenshot of Movie Collection project">
             </div>
-            <p class="note">Note: GitHub Pages doesn't support file uploads. This is a client-side simulation.</p>
-        </section>
-
-        <section class="sites-section">
-            <h2>My Sites</h2>
-            <div class="sites-grid" id="sites-grid">
-                <!-- Sites will be dynamically generated here -->
+            <div class="post-content">
+                <p>A Netflix-style gallery for my movie collection, built with HTML, CSS, and JavaScript, using the OMDb API for metadata.</p>
+                <a href="movie-collection/index.html" class="button">View Project</a>
             </div>
-        </section>
+        </article>
+        <!-- More projects can be added here -->
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Theusedtroll. All rights reserved.</p>
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
